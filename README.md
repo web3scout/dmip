@@ -1,2 +1,5 @@
-# dmomp
-decentralized metaverse objects management protocol
+# dmip
+decentralized metaverse interoperability protocol
+```javascript
+
+```
