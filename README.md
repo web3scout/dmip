@@ -2,7 +2,7 @@
 decentralized metaverse interoperability protocol
 ```javascript
 /*
-0. Decentralized metaverse identity (DMID)
+0. Identity (DMID)
 Unique 256/512 bit (32/64 bytes)
 */
 const sk = randombytes()
@@ -10,7 +10,7 @@ const id = hash(sk.pubkey())
 ```
 ```javascript
 /*
-1. Decentralized metaverse message API
+1. Message API
 dmip.send(msg,ids)
 dmip.onmsg((msg)=>{})
 */
@@ -22,7 +22,7 @@ const ok = await dmip.send(msg,ids)
 ```
 ```javascript
 /*
-2. Decentralized metaverse storage API
+2. Storage API
 */
 dmip.setStorageProvider(provider)
 const {obj,err} = await dmip.get(id)
@@ -30,7 +30,7 @@ const {err} = await dmip.put(obj)
 ```
 ```javascript
 /*
-3. Decentralized metaverse payments API
+3. Payments API
 */
 dmip.setPaymentsProvider(provider)
 const {balance,err} = await dmip.balanceOf(id)
@@ -38,7 +38,7 @@ const {err} = await dmip.transfer(id,value)
 ```
 ```javascript
 /*
-4. Decentralized metaverse tokens API
+4. Tokens API
 */
 dmip.setContractsProvider(provider)
 const {contract,err} = await dmip.contract(address,abi)
@@ -47,7 +47,7 @@ const {err} = await dmip.owner(id,value)
 
 ```javascript
 /*
-5. Decentralized metaverse DAO API
+5. DAO API
 */
 dmip.setContractsProvider(provider)
 ```
